@@ -31,5 +31,5 @@ it("testing division", () => {
 
 //caesarCipher
 it("caesarCipher testing", () => {
-    expect(caesarCipher('abc', 3)).toEqual(['d','e','f']);
+    expect(caesarCipher('zCd', 2)).toEqual(['b','E','f']);
 })

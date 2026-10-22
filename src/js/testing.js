@@ -28,9 +28,15 @@ export const calculator = {
 }
 
 export function caesarCipher(word, shift) {
+   const stringLength=word.length;
    const newLetters= word.split("")
-   .forEach((letter) => letter + shift);
-//    const cipher= newLetters.join("");
+   const cipher=[];
 
-   return newLetters;
+   for(let i=0; i<stringLength; i++){
+     let letterNum= newLetters[i].charCodeAt()+ shift;
+     const result= String.fromCharCode(letterNum);
+     cipher.push(result);
+    }
+
+   return cipher;
 }
