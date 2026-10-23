@@ -1,4 +1,11 @@
-import {capitlize, revertIt, calculator, caesarCipher} from "./testing.js";
+import {
+    capitlize,
+    revertIt,
+    calculator, 
+    caesarCipher,
+    analyzeArray,
+} from "./testing.js";
+
 
 it("capitalize", () => {
     let str= "name";
@@ -40,4 +47,11 @@ it("CaesarCipher non-alphabetical characters", () => {
 
 it("Casesarciper with the last letters", () => {
     expect(caesarCipher('YzX',3)).toEqual('BcA');
-})
+});
+
+
+//Analye Array
+it("Anayze and get it all", () => {
+    expect(analyzeArray([1,8,3,4,2,6]))
+    .toEqual({average: 4, min: 1, max: 8, length:6})
+});
