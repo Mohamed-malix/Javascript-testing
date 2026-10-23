@@ -30,6 +30,10 @@ it("testing division", () => {
 
 
 //caesarCipher
-it("caesarCipher testing", () => {
-    expect(caesarCipher('zCd', 2)).toEqual(['b','E','f']);
-})
+it("CaesarCipher testing", () => {
+    expect(caesarCipher('HeLLo', 3)).toEqual('KhOOr');
+});
+
+it("CaesarCipher non-alphabetical characters", () => {
+    expect(caesarCipher('Hello, World!', 3)).toEqual('Khoor, Zruog!');
+});

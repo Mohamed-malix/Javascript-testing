@@ -33,10 +33,14 @@ export function caesarCipher(word, shift) {
    const cipher=[];
 
    for(let i=0; i<stringLength; i++){
-     let letterNum= newLetters[i].charCodeAt()+ shift;
-     const result= String.fromCharCode(letterNum);
-     cipher.push(result);
+        if(/[a-zA-Z]/.test(newLetters[i])) {
+            let letterNum= newLetters[i].charCodeAt()+ shift;
+            const result= String.fromCharCode(letterNum);
+            cipher.push(result);
+        }else{
+            cipher.push(newLetters[i]);
+        }
     }
 
-   return cipher;
+   return cipher.join("");
 }
